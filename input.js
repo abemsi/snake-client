@@ -25,7 +25,10 @@ const handleUserInput = (key) => {
     console.log("right");
     connection.write("Move: right");
   }
-}
+  if (key === 'm') {
+    connection.write("Say: hiss");
+  }
+};
 
 const setupInput = function(conn) {
   connection = conn;
@@ -34,6 +37,7 @@ const setupInput = function(conn) {
   stdin.setEncoding('utf8');
   stdin.resume();
   stdin.on('data', handleUserInput);
+
   return stdin;
 }
 

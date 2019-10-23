@@ -13,14 +13,14 @@ const connect = function() {
 
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
-    conn.write("Name: WIN");
+    conn.write("Name: AAB");
   });
 
   // Moves
-  let delay = 0;
+  
   conn.on("connect", () => {
     // let m = setInterval(() => {
-    //   conn.write("Move: up");
+    // conn.write("Move: up");
     //   conn.write("Move: right");
     // }, 500);
     // setTimeout(() => clearInterval(m), 5000);
@@ -33,5 +33,5 @@ const connect = function() {
 }
 
 module.exports = {
-  connect,
+  connect
 }

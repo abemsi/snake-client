@@ -13,8 +13,19 @@ const connect = function() {
 
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
-    conn.write("Name: DIE");
+    conn.write("Name: WIN");
   });
+
+  // Moves
+  let delay = 0;
+  conn.on("connect", () => {
+    // let m = setInterval(() => {
+    //   conn.write("Move: up");
+    //   conn.write("Move: right");
+    // }, 500);
+    // setTimeout(() => clearInterval(m), 5000);
+  });
+
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
 
